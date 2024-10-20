@@ -1,0 +1,6 @@
+Name,Suitable Moisture (%),Suitable Temperature (°C),Suitable Weather Condition,Region Found,Crop Infected
+Molya Nematode (Heterodera avenae),Low (10-30),15-25,"Cool, temperate","Rajasthan, Haryana","Barley, Wheat"
+Wheat Gall Nematode (Anguina tricici),Low (10-20),10-20,Cool,"Rajasthan, Punjab, Haryana","Barley, Wheat, Rye"
+Rust (Puccinia graminis f. sp. tritici),Moderate (40-60),15-25,Humid,All over India,Barley
+Root Rot (Fusarium spp.),Moderate (40-60),18-28,Humid,All over India,Barley
+Barley Yellow Dwarf Virus (BYDV),Low (20-40),15-25,"Cool, humid",North India,Barley
