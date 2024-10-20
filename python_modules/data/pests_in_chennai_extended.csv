@@ -1,0 +1,26 @@
+area,soil_moisture_range,temperature_range,weather_conditions,type_of_pest,affected_crops
+Chennai,50-70%,25-30°C,Moderate,Spodoptera litura,"Cotton, Groundnut"
+Chennai,45-60%,25-35°C,Hot,Helicoverpa armigera,"Cotton, Chickpea"
+Chennai,60-70%,24-32°C,Humid,Leucinodes orbonalis,Brinjal
+Chennai,60-70%,20-30°C,Humid,Aphis craccivora,"Cowpea, Beans"
+Chennai,20-30%,30-40°C,Dry,Tetranychus urticae,"Okra, Tomato"
+Chennai,50-60%,25-35°C,Moderate,Scirtothrips dorsalis,"Chilli, Citrus"
+Chennai,60-80%,15-25°C,Humid,Myzus persicae,"Potatoes, Tobacco"
+Chennai,60-80%,20-32°C,Humid,Bactrocera dorsalis,"Mango, Guava"
+Chennai,40-60%,25-32°C,Moderate,Pectinophora gossypiella,Cotton
+Chennai,30-50%,20-30°C,Dry,Bemisia tabaci,"Cotton, Tobacco"
+Chennai,40-60%,25-30°C,Moderate,Nezara viridula,"Soybeans, Rice"
+Chennai,50-60%,15-30°C,Humid,Plutella xylostella,"Cabbage, Broccoli"
+Chennai,55-70%,20-30°C,Humid,Melanagromyza sojae,"Soybean, Mung Bean"
+Chennai,40-60%,25-35°C,Moderate,Chilo partellus,"Maize, Sorghum"
+Chennai,30-50%,25-35°C,Dry,Phenacoccus solenopsis,"Cotton, Okra"
+Chennai,60-80%,22-30°C,Humid,Nephotettix virescens,Rice
+Chennai,60-80%,25-35°C,Humid,Scirpophaga incertulas,"Rice,Bajra"
+Chennai,60-80%,24-32°C,Humid,Leptocorisa acuta,"Rice, Millet"
+Chennai,60-70%,20-32°C,Humid,Spilosoma obliqua,"Jute, Soybean"
+Chennai,60-80%,22-32°C,Humid,Nilaparvata lugens,Rice
+Chennai,40-60%,20-30°C,Moderate,Ostrinia furnacalis,"Maize, Sorghum"
+Chennai,60-80%,20-30°C,Humid,Diaphorina citri,Citrus
+Chennai,45-65%,20-30°C,Moderate,Phthorimaea operculella,"Potatoes, Tomatoes"
+Chennai,30-50%,25-35°C,Dry,Callosobruchus chinensis,Pulses
+Chennai,10-30%,25-37°C,Dry,Trogoderma granarium,"Grains, Cereals"

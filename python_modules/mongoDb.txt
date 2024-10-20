@@ -1,0 +1,5 @@
+66mJvrParJ4Odi0k
+
+mongodb+srv://dk5488:IvNCy0CKXLHIoZA9@cluster0.rcxng.mongodb.net/
+
+mongodb+srv://divypandey110044:66mJvrParJ4Odi0k@cluster0.cqz13.mongodb.net/
