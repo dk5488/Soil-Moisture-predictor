@@ -1,5 +1,5 @@
-Pest Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Damage Symptoms
-Pod Borers,Moderate moisture,18-30°C,Pre-monsoon,"Maharashtra, Karnataka","Pod damage, seed loss"
-Sesame Gall Midge,High moisture,20-28°C,Warm and humid,"Gujarat, Tamil Nadu","Galls on plant, stunted growth"
-Aphids,Low to moderate moisture,20-25°C,Humid,Northern India,"Yellowing leaves, reduced yield"
-Jassid,Moderate moisture,25-30°C,"Warm, humid","Rajasthan, Gujarat","Leaf curling, sap sucking"
+Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crop Infected
+Pod Borers,Moderate ,18-30°C,Pre-monsoon,"Maharashtra, Karnataka",Sesame
+Sesame Gall Midge,High ,20-28°C,Warm and humid,"Gujarat, Tamil Nadu",Sesame
+Aphids,"Low , moderate" ,20-25°C,Humid,Northern India,Sesame
+Jassid,Moderate ,25-30°C,"Warm, humid","Rajasthan, Gujarat",Sesame

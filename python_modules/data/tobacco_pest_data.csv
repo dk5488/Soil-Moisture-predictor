@@ -1,6 +1,6 @@
-Pest Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Damage Symptoms
-Tobacco Caterpillar,Moderate moisture,25-30°C,Warm and dry,"Andhra Pradesh, Gujarat",Leaf damage
-Aphids,Moderate moisture,20-25°C,Humid,Across India,"Yellowing leaves, sap sucking"
-Whitefly,Low moisture,30-35°C,Hot and dry,Northern India,"Sucking sap, leaf wilting"
-Jassids,Moderate moisture,25-30°C,"Warm, humid",Across India,Leaf curling
-Tobacco Thrips,Moderate moisture,20-25°C,Humid,Southern India,Leaf yellowing
+Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crop Infected
+Tobacco Caterpillar,Moderate ,25-30°C,Warm and dry,"Andhra Pradesh, Gujarat",tobacco
+Aphids,Moderate ,20-25°C,Humid,Across India,tobacco
+Whitefly,Low ,30-35°C,Hot and dry,Northern India,tobacco
+Jassids,Moderate ,25-30°C,"Warm, humid",Throughout India,tobacco
+Tobacco Thrips,Moderate ,20-25°C,Humid,Southern India,tobacco

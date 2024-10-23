@@ -1,6 +1,6 @@
-Pest Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Damage Symptoms
-Top Shoot Borer,High moisture,25-30°C,Warm and humid,"Uttar Pradesh, Maharashtra",Damaged shoots
-Early Shoot Borer,Moderate moisture,20-30°C,"Warm, rainy","Bihar, Tamil Nadu",Stem damage
-Root Grubs,Moderate moisture,25-30°C,Warm and dry,Across India,Root damage
-Pyrilla,Moderate moisture,20-25°C,Humid,"Punjab, Haryana","Sucking sap, leaf curling"
-Whitefly,Low moisture,30-35°C,Hot and dry,Northern India,Leaf wilting
+Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crop Infected
+Top Shoot Borer,High ,25-30°C,Warm and humid,"Uttar Pradesh, Maharashtra",sugarcane
+Early Shoot Borer,Moderate ,20-30°C,"Warm, rainy","Bihar, Tamil Nadu",sugarcane
+Root Grubs,Moderate ,25-30°C,Warm and dry,Across India,sugarcane
+Pyrilla,Moderate ,20-25°C,Humid,"Punjab, Haryana",sugarcane
+Whitefly,Low ,30-35°C,Hot and dry,Northern India,sugarcane

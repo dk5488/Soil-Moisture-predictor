@@ -1,5 +1,5 @@
-Pest Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Damage Symptoms
-Leaf Miner,Moderate moisture,20-30°C,Rainy season,"Southern, Western India","Leaf tunneling, defoliation"
-Helicoverpa Armigera,Low to medium moisture,25-30°C,Mildly dry,"Central, Southern India",Pod and flower damage
-Aphids,Moderate moisture,20-25°C,Humid,"Madhya Pradesh, Maharashtra","Stunted growth, reduced yield"
-Spodoptera,Moderate moisture,25-35°C,Cloudy and rainy,"Andhra Pradesh, Karnataka",Leaf and pod damage
+Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crop Infected
+Leaf Miner,Moderate ,20-30°C,Rainy season,"Southern India, Western India",soybean
+Helicoverpa Armigera,"Low , medium" ,25-30°C,Mildly dry,"Central India, Southern India",soybean
+Aphids,Moderate ,20-25°C,Humid,"Madhya Pradesh, Maharashtra",soybean
+Spodoptera,Moderate ,25-35°C,Cloudy and rainy,"Andhra Pradesh, Karnataka",soybean

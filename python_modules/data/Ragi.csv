@@ -1,4 +1,4 @@
-Pest Name,Suitable Moisture,Suitable Temperature,Suitable Weather Condition,Region,Crop Affected
-Stem Borer,Medium,25-30°C,Warm,Tropical regions,Finger Millet
-Shoot Fly,High,20-30°C,Moist,Humid and Dry regions,Finger Millet
-White Grubs,High,25-35°C,Moist,"Moist regions, Southern India",Finger Millet
+Name,Suitable Moisture,Suitable Temperature,Suitable Weather Condition,Region Found,Crop Infected
+Stem Borer,Medium,25-30°C,Warm,"Tamil Nadu, Andhra Pradesh, Karnataka",Ragi
+Shoot Fly,High,20-30°C,Moist,"Madhya Pradesh, Odisha, Chhattisgarh",Ragi
+White Grubs,High,25-35°C,Moist,"Karnataka, Kerala, Maharashtra",Ragi
