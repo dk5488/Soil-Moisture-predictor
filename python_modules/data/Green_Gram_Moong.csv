@@ -1,4 +1,4 @@
-Name,Suitable Moisture,Suitable Temperature,Suitable Weather Condition,Region Found,Crop They Infect
-Callosobruchus chinensis,Low,25-30°C,Dry,All over India,Green Gram
-Maruca vitrata,Moderate,25-35°C,"Warm, humid",All over India,Green Gram
-Aphis craccivora,Moderate,15-25°C,Moderate humidity,All over India,Green Gram
+Name,Suitable Moisture,Suitable Temperature,Suitable Weather Condition,Region Found,Crop Infected
+Callosobruchus chinensis,Low,25-30°C,Dry,Throughout India,Green Gram
+Maruca vitrata,Moderate,25-35°C,"Warm, humid",Throughout India,Green Gram
+Aphis craccivora,Moderate,15-25°C,Moderate humidity,Throughout India,Green Gram

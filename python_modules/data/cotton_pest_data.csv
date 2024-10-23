@@ -1,6 +1,6 @@
-Pest Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Damage Symptoms
-Bollworm,Moderate moisture,25-30°C,Warm and dry,"Punjab, Haryana",Damaged bolls
-Whitefly,Low moisture,30-35°C,Hot and dry,"Maharashtra, Gujarat","Sucking sap, wilting"
-Aphids,Moderate moisture,20-25°C,Humid,Southern India,"Yellowing leaves, stunted growth"
-Jassids,Moderate moisture,25-30°C,"Warm, humid",Northern India,"Leaf curling, stunted growth"
-Pink Bollworm,Low moisture,25-35°C,Hot and dry,Across India,Internal boll damage
+Pest Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crops Infected
+Bollworm,Moderate,25-30°C,Warm and dry,"Punjab, Haryana",cotton
+Whitefly,Low,30-35°C,Hot and dry,"Maharashtra, Gujarat",cotton
+Aphids,Moderate,20-25°C,Humid,Southern India,cotton
+Jassids,Moderate,25-30°C,"Warm, humid",Northern India,cotton
+Pink Bollworm,Low,25-35°C,Hot and dry,Throughout India,cotton

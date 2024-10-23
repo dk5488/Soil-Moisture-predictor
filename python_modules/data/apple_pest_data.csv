@@ -1,6 +1,6 @@
 Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crops Infected
-Codling Moth,Moderate moisture,20-25°C,Mildly dry,"Himachal Pradesh, Jammu & Kashmir",apple
-San Jose Scale,Low moisture,20-30°C,Dry,"Uttarakhand, Himachal Pradesh",apple
-Woolly Aphid,Moderate moisture,15-25°C,Humid,Northern India,apple
-Leaf Miner,Moderate moisture,20-25°C,Humid,Northern India,apple
-Fruit Borer,Moderate moisture,25-30°C,Warm and dry,"Kashmir, Himachal Pradesh",apple
+Codling Moth,Moderate ,20-25°C,Mildly dry,"Himachal Pradesh, Jammu & Kashmir",apple
+San Jose Scale,Low ,20-30°C,Dry,"Uttarakhand, Himachal Pradesh",apple
+Woolly Aphid,Moderate ,15-25°C,Humid,Northern India,apple
+Leaf Miner,Moderate ,20-25°C,Humid,Northern India,apple
+Fruit Borer,Moderate ,25-30°C,Warm and dry,"Kashmir, Himachal Pradesh",apple

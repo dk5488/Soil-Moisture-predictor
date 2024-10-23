@@ -1,6 +1,6 @@
-Pest Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Damage Symptoms
-Thrips,Moderate moisture,20-25°C,Humid,"Maharashtra, Karnataka","Leaf damage, yellowing"
-Mealy Bug,Moderate moisture,20-30°C,Warm and dry,Northern India,"Sap sucking, leaf curling"
-Stem Borer,Low to medium moisture,25-30°C,Dry,Southern India,"Stem boring, plant wilting"
-Fruit Fly,Moderate moisture,25-35°C,Pre-monsoon,Northern India,"Fruit damage, drop"
-Aphids,Moderate moisture,20-25°C,Humid,Across India,"Sap sucking, leaf curling"
+Pest Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crops Infected
+Thrips,Moderate,20-25°C,Humid,"Maharashtra, Karnataka",grapes
+Mealy Bug,Moderate ,20-30°C,Warm and dry,Northern India,grapes
+Stem Borer,"Low,medium",25-30°C,Dry,Southern India,grapes
+Fruit Fly,Moderate,25-35°C,Pre-monsoon,Northern India,grapes
+Aphids,Moderate,20-25°C,Humid,Throughout India,grapes
