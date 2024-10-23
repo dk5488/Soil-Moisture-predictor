@@ -3,12 +3,6 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import pandas as pd
 
-from src.data_loader import preprocess_data
-
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score
-
 from src.data_loader import load_all_data, preprocess_data
 
 def train_model(data_folder='data/'):
@@ -27,21 +21,29 @@ def train_model(data_folder='data/'):
     y_pred = rf_model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
     
+    print("Features (X) shape:", X_train.shape)
+    print("First few rows of features:\n", X_train.head())
+    print("Data types of features:\n", X_train.dtypes)
+    print("Target (y) shape:", y_train.shape)
+    print("First few rows of target:\n", y_train.head())
+
+    
     return rf_model, X.columns.tolist(), accuracy
 
 
 def predict_pest_infestation(model, feature_names, crop, soil_moisture, weather_data):
     temperature, humidity, fetched_weather_condition = weather_data
     
-    possible_conditions = [col for col in feature_names if 'Weather_Condition' in col]
+    possible_conditions = [col for col in feature_names if 'Weather Condition' in col]
+    
     from src.utils import compare_weather_conditions
     matched_weather_condition = compare_weather_conditions(fetched_weather_condition, possible_conditions)
     
     input_data = pd.DataFrame({
-        'Soil_Moisture': [soil_moisture],
-        'Temperature': [temperature],
-        'Weather_Condition_' + matched_weather_condition: [1],
-        'Affected_Crops_' + crop: [1]
+        'Suitable Moisture': [soil_moisture],
+        'Suitable Temperature': [temperature],
+        'Weather Condition_' + matched_weather_condition: [1],
+        'Crop Infected_' + crop: [1]
     })
     
     for col in feature_names:
