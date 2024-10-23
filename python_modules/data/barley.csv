@@ -1,8 +1,8 @@
 Name,Suitable Moisture,Suitable Temperature,Suitable Weather Condition,Region Found,Crop Infected
 Molya Nematode,Low ,15-25°C,"Cool, temperate","Rajasthan, Haryana","Barley, Wheat"
 Wheat Gall Nematode,Low ,10-20°C,Cool,"Rajasthan, Punjab, Haryana","Barley, Wheat, Rye"
-Rust ,Moderate ,15-25°C,Humid,All over India,Barley
-Root Rot ,Moderate ,18-28°C,Humid,All over India,Barley
+Rust ,Moderate ,15-25°C,Humid,Throughout India,Barley
+Root Rot ,Moderate ,18-28°C,Humid,Throughout India,Barley
 Barley Yellow Dwarf Virus ,Low ,15-25°C,"Cool, humid",North India,Barley
 
 
