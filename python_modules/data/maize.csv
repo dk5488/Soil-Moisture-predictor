@@ -1,6 +1,6 @@
-Name,Suitable Moisture (%),Suitable Temperature (°C),Suitable Weather Condition,Region Found,Crop Infected
-Fall Armyworm (Spodoptera frugiperda),High (50-80),25-30,"Warm, wet","Karnataka, Andhra Pradesh, Tamil Nadu",Maize
-Turcicum Leaf Blight (Exserohilum turcicum),Moderate (40-60),20-28,Humid,"Karnataka, AP, Tamil Nadu",Maize
-Fusarium Stalk Rot (Fusarium moniliforme),Moderate (40-60),22-28,"Warm, humid",All over India,Maize
-Common Rust (Puccinia sorghi),Moderate (40-60),18-28,"Humid, warm",All over India,Maize
-Charcoal Rot (Macrophomina phaseolina),Low (30-50),28-32,"Dry, warm",Southern India,Maize
+Name,Suitable Moisture,Suitable Temperature,Suitable Weather Condition,Region Found,Crop Infected
+Fall Armyworm (Spodoptera frugiperda),High ,25-30°C,"Warm, wet","Karnataka, Andhra Pradesh, Tamil Nadu",Maize
+Turcicum Leaf Blight (Exserohilum turcicum),Moderate ,20-28°C,Humid,"Karnataka, Andhra Pradesh, Tamil Nadu",Maize
+Fusarium Stalk Rot (Fusarium moniliforme),Moderate ,22-28°C,"Warm, humid",Throughout India,Maize
+Common Rust (Puccinia sorghi),Moderate ,18-28°C,"Humid, warm",Throughout India,Maize
+Charcoal Rot (Macrophomina phaseolina),Low ,28-32°C,"Dry, warm",Southern India,Maize

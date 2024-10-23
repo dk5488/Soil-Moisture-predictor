@@ -1,5 +1,5 @@
-Pest Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Damage Symptoms
-Mustard Aphid,Low moisture,10-25°C,"Cold, dry weather","Punjab, Haryana","Yellowing leaves, sap sucking"
-Diamondback Moth,Moderate moisture,20-30°C,Warm and dry,"Rajasthan, Haryana","Leaf damage, reduced yield"
-Cabbage Aphid,Moderate moisture,18-28°C,Humid,"Uttar Pradesh, Haryana","Leaf curling, plant wilting"
-Painted Bug,Moderate moisture,20-30°C,Mildly dry,Across India,"Pod damage, seed loss"
+Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crops Infected
+Mustard Aphid,Low ,10-25°C,"Cold, dry","Punjab, Haryana",mustard
+Diamondback Moth,Moderate,20-30°C,Warm and dry,"Rajasthan, Haryana",mustard
+Cabbage Aphid,Moderate,18-28°C,Humid,"Uttar Pradesh, Haryana",mustard
+Painted Bug,Moderate ,20-30°C,Mildly dry,Throughout India,mustard

@@ -1,4 +1,4 @@
-Pest Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crops Infected
+Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crops Infected
 Fruit Fly,Moderate ,25-35°C,Pre-monsoon,"Uttar Pradesh, Maharashtra",guava
 Mealy Bug,Moderate ,20-30°C,Warm and dry,Northern India,guava
 Guava Stem Borer,"Low , medium" ,25-30°C,Dry,Southern India,guava

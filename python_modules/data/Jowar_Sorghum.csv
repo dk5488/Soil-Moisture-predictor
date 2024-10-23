@@ -1,4 +1,4 @@
-Pest Name,Suitable Moisture,Suitable Temperature,Suitable Weather Condition,Region Found,Crop Infected
+Name,Suitable Moisture,Suitable Temperature,Suitable Weather Condition,Region Found,Crop Infected
 Stem Borer,Medium,25-35°C,Warm,"Warm regions, Western India",Sorghum
 Shoot Fly,High,20-30°C,Moist,"Central India,Southern India",Sorghum
 Armyworm,Medium,25-35°C,"Warm, Wet","Eastern India, Southern India",Sorghum
