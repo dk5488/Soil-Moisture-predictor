@@ -1,4 +1,4 @@
-Name,Suitable Moisture,Suitable Temperature,Suitable Weather Condition,Region Found,Crop Infected
+Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crop Infected
 Stem Borer,Medium,25-30°C,Warm,"Tamil Nadu, Andhra Pradesh, Karnataka",Ragi
 Shoot Fly,High,20-30°C,Moist,"Madhya Pradesh, Odisha, Chhattisgarh",Ragi
 White Grubs,High,25-35°C,Moist,"Karnataka, Kerala, Maharashtra",Ragi

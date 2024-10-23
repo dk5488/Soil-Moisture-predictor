@@ -1,4 +1,4 @@
-Pest Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crops Infected
+Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crop Infected
 Bollworm,Moderate,25-30°C,Warm and dry,"Punjab, Haryana",cotton
 Whitefly,Low,30-35°C,Hot and dry,"Maharashtra, Gujarat",cotton
 Aphids,Moderate,20-25°C,Humid,Southern India,cotton

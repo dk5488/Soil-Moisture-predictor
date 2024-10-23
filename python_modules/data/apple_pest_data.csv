@@ -1,4 +1,4 @@
-Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crops Infected
+Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crop Infected
 Codling Moth,Moderate ,20-25°C,Mildly dry,"Himachal Pradesh, Jammu & Kashmir",apple
 San Jose Scale,Low ,20-30°C,Dry,"Uttarakhand, Himachal Pradesh",apple
 Woolly Aphid,Moderate ,15-25°C,Humid,Northern India,apple

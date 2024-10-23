@@ -1,4 +1,4 @@
-Pest Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crops Infected
+Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crop Infected
 White Grubs,High soil ,25-30°C,Post-monsoon,"Gujarat, Rajasthan",castor
 Spodoptera,Moderate ,25-35°C,"Cloudy, rainy","Andhra Pradesh, Tamil Nadu",castor
 Semi-Looper,Moderate ,25-30°C,Cloudy,"Karnataka, Andhra Pradesh",castor

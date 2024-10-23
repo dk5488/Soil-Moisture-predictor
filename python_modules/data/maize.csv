@@ -1,4 +1,4 @@
-Name,Suitable Moisture,Suitable Temperature,Suitable Weather Condition,Region Found,Crop Infected
+Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crop Infected
 Fall Armyworm (Spodoptera frugiperda),High ,25-30°C,"Warm, wet","Karnataka, Andhra Pradesh, Tamil Nadu",Maize
 Turcicum Leaf Blight (Exserohilum turcicum),Moderate ,20-28°C,Humid,"Karnataka, Andhra Pradesh, Tamil Nadu",Maize
 Fusarium Stalk Rot (Fusarium moniliforme),Moderate ,22-28°C,"Warm, humid",Throughout India,Maize

@@ -1,4 +1,4 @@
-Name,Suitable Moisture,Suitable Temperature,Suitable Weather Condition,Region Found,Crop Infected
+Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crop Infected
 Pink Stem Borer (Sesamia inferens),Moderate ,20-30°C,"Dry, hot","Haryana, Punjab, Rajasthan",Wheat
 Gram Pod Borer (Helicoverpa armigera),Moderate ,18-32°C,"Warm, dry","Throughout India",Wheat
 Termites (Odontotermes obesus, Moderate,40-60°C,Dry,"Haryana, Rajasthan, Punjab",Wheat

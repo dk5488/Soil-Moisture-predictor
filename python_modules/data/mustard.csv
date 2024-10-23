@@ -1,4 +1,4 @@
-Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crops Infected
+Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crop Infected
 Mustard Aphid,Low ,10-25°C,"Cold, dry","Punjab, Haryana",mustard
 Diamondback Moth,Moderate,20-30°C,Warm and dry,"Rajasthan, Haryana",mustard
 Cabbage Aphid,Moderate,18-28°C,Humid,"Uttar Pradesh, Haryana",mustard

@@ -1,6 +1,6 @@
-Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crops Infected
+Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crop Infected
 White Grubs,High  ,25-30°C,Post-monsoon,"Gujarat, Rajasthan",groundnut
-Leaf Miner,Moderate ,20-30°C,Rainy season,"Southern, Western India",groundnut
+Leaf Miner,Moderate ,20-30°C,Rainy season,"Southern India, Western India",groundnut
 Termites,"Low,medium" ,28-32°C,Dry and warm,Throughout India,groundnut
 Spodoptera,Moderate ,25-35°C,Cloudy and rainy,"Andhra Pradesh, Tamil Nadu",groundnut
 Aphids,Moderate ,20-25°C,Humid,"Maharashtra, Tamil Nadu",groundnut
