@@ -1,6 +1,6 @@
-Pest Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Damage Symptoms
-Jute Hairy Caterpillar,Moderate moisture,20-30°C,Warm and humid,"West Bengal, Bihar",Defoliation
-Spodoptera,Moderate moisture,25-30°C,Cloudy and rainy,Eastern India,Leaf damage
-Stem Borer,Low to medium moisture,25-32°C,Dry and warm,Eastern India,Stem boring
-Aphids,Moderate moisture,20-25°C,Humid,West Bengal,Sap sucking
-Jassids,Moderate moisture,25-30°C,"Warm, humid",Eastern India,Leaf curling
+Pest Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crops Infected
+Jute Hairy Caterpillar,Moderate ,20-30°C,Warm and humid,"West Bengal, Bihar",jute
+Spodoptera,Moderate ,25-30°C,Cloudy and rainy,Eastern India,jute
+Stem Borer,Low to medium ,25-32°C,Dry and warm,Eastern India,jute
+Aphids,Moderate ,20-25°C,Humid,West Bengal,jute
+Jassids,Moderate ,25-30°C,"Warm, humid",Eastern India,jute

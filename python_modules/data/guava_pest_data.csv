@@ -1,6 +1,6 @@
-Pest Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Damage Symptoms
-Fruit Fly,Moderate moisture,25-35°C,Pre-monsoon,"Uttar Pradesh, Maharashtra","Fruit drop, stunted growth"
-Mealy Bug,Moderate moisture,20-30°C,Warm and dry,Northern India,"Leaf curling, sap sucking"
-Guava Stem Borer,Low to medium moisture,25-30°C,Dry,Southern India,"Stem damage, plant wilting"
-Thrips,Moderate moisture,20-25°C,Humid,Northern India,"Leaf damage, yellowing"
-Guava Moth,Moderate moisture,20-30°C,Warm and dry,Across India,Fruit damage
+Pest Name,Suitable Moisture,Suitable Temperature,Weather Condition,Region Found,Crops Infected
+Fruit Fly,Moderate ,25-35°C,Pre-monsoon,"Uttar Pradesh, Maharashtra",guava
+Mealy Bug,Moderate ,20-30°C,Warm and dry,Northern India,guava
+Guava Stem Borer,"Low , medium" ,25-30°C,Dry,Southern India,guava
+Thrips,Moderate ,20-25°C,Humid,Northern India,guava
+Guava Moth,Moderate ,20-30°C,Warm and dry,Throughout India,guava
