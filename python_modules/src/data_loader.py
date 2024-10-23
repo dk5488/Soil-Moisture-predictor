@@ -8,10 +8,14 @@ def load_all_data(data_folder='data/'):
     all_data = []
     for file in csv_files:
         file_path = os.path.join(data_folder, file)
-        df = pd.read_csv(file_path)
-        df['Crop_Type'] = os.path.splitext(file)[0]  # Add the crop type based on the filename
-        all_data.append(df)
-
+        try:
+            # Use 'on_bad_lines' to skip bad lines
+            df = pd.read_csv(file_path, on_bad_lines='skip')  # Skips problematic lines
+            df['Crop_Type'] = os.path.splitext(file)[0]  # Add the crop type based on the filename
+            all_data.append(df)
+        except pd.errors.ParserError as e:
+            print(f"Error parsing {file}: {e}")
+    
     # Concatenate all DataFrames into one
     combined_data = pd.concat(all_data, ignore_index=True)
     return combined_data

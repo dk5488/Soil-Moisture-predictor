@@ -1,6 +1,13 @@
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
+import pandas as pd
+
+from src.data_loader import preprocess_data
+
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
 
 from src.data_loader import load_all_data, preprocess_data
 
@@ -21,3 +28,29 @@ def train_model(data_folder='data/'):
     accuracy = accuracy_score(y_test, y_pred)
     
     return rf_model, X.columns.tolist(), accuracy
+
+
+def predict_pest_infestation(model, feature_names, crop, soil_moisture, weather_data):
+    temperature, humidity, fetched_weather_condition = weather_data
+    
+    possible_conditions = [col for col in feature_names if 'Weather_Condition' in col]
+    from src.utils import compare_weather_conditions
+    matched_weather_condition = compare_weather_conditions(fetched_weather_condition, possible_conditions)
+    
+    input_data = pd.DataFrame({
+        'Soil_Moisture': [soil_moisture],
+        'Temperature': [temperature],
+        'Weather_Condition_' + matched_weather_condition: [1],
+        'Affected_Crops_' + crop: [1]
+    })
+    
+    for col in feature_names:
+        if col not in input_data.columns:
+            input_data[col] = 0
+    
+    input_data = input_data[feature_names]
+    pest_prediction_prob = model.predict_proba(input_data)
+    infestation_chance = max(pest_prediction_prob[0]) * 100
+    pest_prediction = model.classes_[pest_prediction_prob.argmax()]
+    
+    return pest_prediction, infestation_chance
