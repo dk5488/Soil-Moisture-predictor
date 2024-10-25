@@ -6,7 +6,7 @@ import Alert from "./alert";
 
 const API_KEY = "f7b9f529ddf845beaff8fd4d92160f44"; // Your Weather API key
 const MOISTURE_API_URL = "http://localhost:5000/get_latest_moisture"; // Ensure this route is correct
-const PREDICTION_API_URL = "http://localhost:5000/predict_pest"; // Route for pest prediction
+const PREDICTION_API_URL = "http://127.0.0.1:5000/predict_pest"; // Route for pest prediction
 
 const initialTemperatureData = {
   labels: [
@@ -46,32 +46,50 @@ function Dashboard() {
   const [temperatureData, setTemperatureData] = useState(initialTemperatureData);
   const [moistureData, setMoistureData] = useState(initialMoistureData);
   const [cropInput, setCropInput] = useState(""); // State for crop input
+  const [regionInput, setRegionInput] = useState(""); // State for region input
+  const [soilMoistureInput, setSoilMoistureInput] = useState(""); // State for optional soil moisture input
   const [prediction, setPrediction] = useState(null); // State for the pest prediction result
-
-
-   // Depend on lat and lon
+  const [loading, setLoading] = useState(false); // Loading state
 
   // Handle form submission for pest prediction
   const handlePredict = (e) => {
     e.preventDefault();
+    setLoading(true); // Start loading animation
+
+    const soilMoistureValue = soilMoistureInput ? parseFloat(soilMoistureInput) : null;
     fetch(PREDICTION_API_URL, {
-      method: "POST",
+      method: 'POST',
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ crop: cropInput }),
+      body: JSON.stringify({
+        crop: cropInput,
+        region: regionInput,
+        soil_moisture: soilMoistureValue,
+      }),
     })
-      .then((response) => response.json())
-      .then((data) => {
-        // Assuming data.prediction has the format "Pest Type, Chance"
-        const [pestType, chance] = data.prediction.split(",");
-        const infestationChance = parseFloat(chance).toFixed(2); // Format to 2 decimal places
-        const chanceLevel = infestationChance >= 80 ? "high" : "low"; // Determine chance level
-        const color = chanceLevel === "high" ? "text-red-500" : "text-green-500"; // Set color based on chance level
-
-        setPrediction({ pestType, infestationChance, color });
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
       })
-      .catch((error) => console.error("Error fetching prediction:", error));
+      .then((data) => {
+        const pestType = data.pest_prediction;
+        const infestationChance = parseFloat(data.infestation_chance).toFixed(2);
+        const chanceLevel = infestationChance >= 80 ? "high" : "low";
+        const color = chanceLevel === "high" ? "text-red-500" : "text-green-500";
+
+        // Delay showing prediction for 3 seconds
+        setTimeout(() => {
+          setPrediction({ pestType, infestationChance, color });
+          setLoading(false); // Stop loading animation
+        }, 3000);
+      })
+      .catch((error) => {
+        console.error("Error fetching prediction:", error);
+        setLoading(false);
+      });
   };
 
   return (
@@ -115,6 +133,20 @@ function Dashboard() {
             onChange={(e) => setCropInput(e.target.value)}
             className="px-3 py-2 rounded bg-[#242424] text-white"
           />
+          <input
+            type="text"
+            placeholder="Enter Region"
+            value={regionInput}
+            onChange={(e) => setRegionInput(e.target.value)}
+            className="px-3 py-2 rounded bg-[#242424] text-white"
+          />
+          <input
+            type="text"
+            placeholder="Enter Soil Moisture (Optional)"
+            value={soilMoistureInput}
+            onChange={(e) => setSoilMoistureInput(e.target.value)}
+            className="px-3 py-2 rounded bg-[#242424] text-white"
+          />
           <button
             type="submit"
             className="bg-[#ff6f61] text-white px-4 py-2 rounded"
@@ -123,8 +155,12 @@ function Dashboard() {
           </button>
         </form>
 
-        {/* Display Prediction Result */}
-        {prediction && (
+        {/* Display Loading Animation or Prediction Result */}
+        {loading ? (
+          <div className="mt-5 p-4 rounded bg-[#ff6f61] animate-pulse">
+            <h3 className="font-bold text-center">ML Engine running...</h3>
+          </div>
+        ) : prediction && (
           <div className={`mt-5 p-4 rounded ${prediction.color}`}>
             <h3 className="font-bold">Predicted Pest Infestation:</h3>
             <p>{`${prediction.pestType} ${prediction.infestationChance}%`}</p>

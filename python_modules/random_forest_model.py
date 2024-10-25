@@ -3,18 +3,16 @@ from src.model import train_model, predict_pest_infestation
 from src.weather_data import fetch_weather_data
 
 def get_soil_moisture():
-    return 50  # Placeholder for real sensor data
+    return 674  # Placeholder for real sensor data
 
-def main():
+def main(crop_input, region_input, soil_moisture):
     print("Training the RandomForest model...")
     model, feature_names, accuracy = train_model()  # Train model with all CSVs from data directory
-    
+
     if accuracy < 0.80:
         print(f"Model accuracy is {accuracy * 100:.2f}%. Fine-tuning might be needed.")
     
-    crop_input = input("Enter the crop (e.g., Tomato, Rice, etc.): ").strip()
-    region_input = input("Enter the region/state (e.g., Maharashtra, Punjab, etc.): ").strip()
-    soil_moisture = get_soil_moisture()
+    # Fetch weather data
     weather_data = fetch_weather_data()  # Ensure this function returns (temperature, humidity, weather_condition)
     
     print("Fetching live data from sensors and predicting pest infestation...")
@@ -22,10 +20,8 @@ def main():
         model, feature_names, crop_input, region_input, soil_moisture, weather_data
     )
     
-    if infestation_chance >= 80:
-        print(f"Predicted Pest Infestation: {pest_prediction} ({infestation_chance:.2f}% chance)")
-    else:
-        print(f"No significant chances of infestation (Only {infestation_chance:.2f}% chance)")
+    # Return pest prediction and infestation chance
+    return pest_prediction, infestation_chance
 
 if __name__ == "__main__":
-    main()
+    main()  # This will still be for local testing

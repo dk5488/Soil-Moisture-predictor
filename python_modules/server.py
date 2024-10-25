@@ -3,16 +3,16 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from pymongo import MongoClient, ASCENDING,DESCENDING
 from datetime import datetime
-from random_forest_model import train_model, predict_pest_infestation
+from random_forest_model import train_model, main
 
 app = Flask(__name__)
 CORS(app)
 
 # Load the dataset
-df = pd.read_csv('./data/chengalpattu_pests.csv')
+df = pd.read_csv('./data/rice.csv')
 df.columns = df.columns.str.strip().str.replace(' ', '_').str.lower()
 
-'''client = MongoClient('mongodb+srv://divypandey110044:ThzFcHUqT9Va3aLS@cluster0.x0qe7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+'''client = MongoClient('mongodb+srv://divypandey110044:@cluster0.x0qe7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 db = client.moistureRecord
 collection = db.readings
 
@@ -20,24 +20,43 @@ collection.create_index([('timestamp', ASCENDING)])'''
 
 model, feature_names, accuracy = train_model()
 
+from flask import Flask, request, jsonify
+from random_forest_model import main, get_soil_moisture  # Import get_soil_moisture
+
+app = Flask(__name__)
+
+from flask import Flask, request, jsonify
+from random_forest_model import main, get_soil_moisture  # Import the main function and get_soil_moisture
+
+app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}}, methods=["GET", "POST", "OPTIONS"])
 @app.route('/predict_pest', methods=['POST'])
 def predict_pest():
+    print('request reched to backend')
     data = request.json
     crop = data.get('crop')
+    region = data.get('region')
+    
+    # Check if soil_moisture is provided; if not, call get_soil_moisture()
+    soil_moisture = data.get('soil_moisture')
+    if soil_moisture is None:
+        soil_moisture = get_soil_moisture()  # Call function to get soil moisture data
 
-    # Default values for moisture, temperature, and weather condition
-    moisture = 76  # Default moisture value
-    temperature = 33  # Default temperature value
-    weather_condition = "Sunny"  # Default weather condition
+    # Call the main function from random_forest_model with the extracted data
+    print('Calling prediction')
+    pest_prediction, infestation_chance = main(crop_input=crop, region_input=region, soil_moisture=soil_moisture)
+    print('response ',pest_prediction,infestation_chance)
 
-    if crop:
-        # Predict pest infestation using the crop input
-        pest_prediction = predict_pest_infestation(model, feature_names, crop=crop)
+    # Return the prediction results to the frontend
+    return jsonify({
+        "pest_prediction": pest_prediction,
+        "infestation_chance": infestation_chance
+    }), 200
 
-        print({"prediction in api": pest_prediction})
-        return jsonify({"prediction": pest_prediction}), 200
-    else:
-        return jsonify({"error": "Crop input is required"}), 400
+if __name__ == "__main__":
+    app.run(debug=True)
+
+
 
 
 '''@app.route('/update', methods=['POST'])
