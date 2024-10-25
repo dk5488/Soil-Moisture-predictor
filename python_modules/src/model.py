@@ -27,11 +27,9 @@ def train_model(data_folder='data/'):
     print("Target (y) shape:", y_train.shape)
     print("First few rows of target:\n", y_train.head())
 
-    
     return rf_model, X.columns.tolist(), accuracy
 
-
-def predict_pest_infestation(model, feature_names, crop, soil_moisture, weather_data):
+def predict_pest_infestation(model, feature_names, crop, region, soil_moisture, weather_data):
     temperature, humidity, fetched_weather_condition = weather_data
     
     possible_conditions = [col for col in feature_names if 'Weather Condition' in col]
@@ -43,14 +41,18 @@ def predict_pest_infestation(model, feature_names, crop, soil_moisture, weather_
         'Suitable Moisture': [soil_moisture],
         'Suitable Temperature': [temperature],
         'Weather Condition_' + matched_weather_condition: [1],
-        'Crop Infected_' + crop: [1]
+        'Crop Infected_' + crop: [1],
+        'Region_' + region: [1]
     })
     
+    # Fill missing columns in input data with 0 to match feature_names
     for col in feature_names:
         if col not in input_data.columns:
             input_data[col] = 0
     
+    # Ensure columns order matches model feature names
     input_data = input_data[feature_names]
+    
     pest_prediction_prob = model.predict_proba(input_data)
     infestation_chance = max(pest_prediction_prob[0]) * 100
     pest_prediction = model.classes_[pest_prediction_prob.argmax()]

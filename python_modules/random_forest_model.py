@@ -13,11 +13,14 @@ def main():
         print(f"Model accuracy is {accuracy * 100:.2f}%. Fine-tuning might be needed.")
     
     crop_input = input("Enter the crop (e.g., Tomato, Rice, etc.): ").strip()
+    region_input = input("Enter the region/state (e.g., Maharashtra, Punjab, etc.): ").strip()
     soil_moisture = get_soil_moisture()
     weather_data = fetch_weather_data()  # Ensure this function returns (temperature, humidity, weather_condition)
     
     print("Fetching live data from sensors and predicting pest infestation...")
-    pest_prediction, infestation_chance = predict_pest_infestation(model, feature_names, crop_input, soil_moisture, weather_data)
+    pest_prediction, infestation_chance = predict_pest_infestation(
+        model, feature_names, crop_input, region_input, soil_moisture, weather_data
+    )
     
     if infestation_chance >= 80:
         print(f"Predicted Pest Infestation: {pest_prediction} ({infestation_chance:.2f}% chance)")

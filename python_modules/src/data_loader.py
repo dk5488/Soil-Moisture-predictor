@@ -12,6 +12,8 @@ def load_all_data(data_folder='data/'):
             # Use 'on_bad_lines' to skip bad lines
             df = pd.read_csv(file_path, on_bad_lines='skip')  # Skips problematic lines
             df['Crop Infected'] = os.path.splitext(file)[0]  # Add the crop type based on the filename
+            if 'Region' not in df.columns:
+                df['Region'] = 'Unknown'  # Default value if Region is missing
             all_data.append(df)
         except pd.errors.ParserError as e:
             print(f"Error parsing {file}: {e}")
@@ -20,11 +22,9 @@ def load_all_data(data_folder='data/'):
     combined_data = pd.concat(all_data, ignore_index=True)
     return combined_data
 
-import pandas as pd
-
 def preprocess_data(data):
     # Check column existence and handle missing values
-    required_columns = ['Suitable Moisture', 'Suitable Temperature', 'Weather Condition', 'Crop Infected']
+    required_columns = ['Suitable Moisture', 'Suitable Temperature', 'Weather Condition', 'Crop Infected', 'Region']
     for col in required_columns:
         if col not in data.columns:
             raise ValueError(f"Missing column in data: {col}")
@@ -50,10 +50,10 @@ def preprocess_data(data):
     data['Suitable Temperature'] = data['Suitable Temperature'].apply(parse_temperature)
 
     # Prepare features (X) and target (y)
-    X = data[['Suitable Moisture', 'Suitable Temperature', 'Weather Condition', 'Crop Infected']]
+    X = data[['Suitable Moisture', 'Suitable Temperature', 'Weather Condition', 'Crop Infected', 'Region']]
 
-    # One-hot encode the Weather Condition and Crop Infected columns
-    X = pd.get_dummies(X, columns=['Weather Condition', 'Crop Infected'], drop_first=True)
+    # One-hot encode the Weather Condition, Crop Infected, and Region columns
+    X = pd.get_dummies(X, columns=['Weather Condition', 'Crop Infected', 'Region'], drop_first=True)
 
     # Target variable
     y = data['Name']  # Adjust this based on your actual target variable
@@ -64,10 +64,8 @@ def preprocess_data(data):
     data = data[data['Name'].isin(classes_to_keep)]
     
     # Re-prepare X and y after filtering
-    X = pd.get_dummies(data[['Suitable Moisture', 'Suitable Temperature', 'Weather Condition', 'Crop Infected']], 
-                       columns=['Weather Condition', 'Crop Infected'], drop_first=True)
+    X = pd.get_dummies(data[['Suitable Moisture', 'Suitable Temperature', 'Weather Condition', 'Crop Infected', 'Region']], 
+                       columns=['Weather Condition', 'Crop Infected', 'Region'], drop_first=True)
     y = data['Name']
     
     return X, y
-
-
