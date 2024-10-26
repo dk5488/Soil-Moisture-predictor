@@ -62,7 +62,8 @@ def plot_data(data):
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
 
     # Show the plots
-    plt.show()  # This will block until the plot window is closed
+    plt.show() 
+    plt.close()# This will block until the plot window is closed
 
 def async_plot(data):
     plot_thread = threading.Thread(target=plot_data, args=(data,))
@@ -82,18 +83,17 @@ def preprocess_data(data, target_column='Name'):
             return float(temp_str.strip().replace('°C', ''))
 
     data['Suitable Moisture Analog'] = data['Suitable Moisture'].apply(map_moisture_analog)
-    data = data[data['Suitable Moisture Analog'].notnull()]  # Drop rows with None in 'Suitable Moisture Analog'
-
-    # Update temperature parsing using .loc to avoid SettingWithCopyWarning
+    data = data[data['Suitable Moisture Analog'].notnull()] 
+    
     data.loc[:, 'Suitable Temperature'] = data['Suitable Temperature'].apply(parse_temperature)
 
-    # Separate features for X before encoding
+    
     X = data[['Suitable Moisture', 'Suitable Temperature', 'Weather Condition', 'Crop Infected', 'Region Found']]
     
-    # Print X before encoding
+    
     print("X before encoding:\n", X.head())
 
-    # Call async plot function for visualization
+    
     async_plot(data)
 
     # Encode categorical features after visualization
