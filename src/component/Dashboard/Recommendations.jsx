@@ -4,6 +4,12 @@ function Recommendations({ currentMoisture }) {
   const plantingTime = "April to June";
   const harvestTime = "September to November";
 
+  const recommendationItems = [
+    { label: "Watering Suggestion:", value: wateringSuggestion },
+    { label: "Optimal Planting Time:", value: plantingTime },
+    { label: "Optimal Harvest Time:", value: harvestTime },
+  ];
+   
   let wateringSuggestion = "";
   if (currentMoisture < 35) {
     wateringSuggestion = "The moisture level is low. It is recommended to increase watering to ensure optimal growth.";
@@ -13,11 +19,7 @@ function Recommendations({ currentMoisture }) {
     wateringSuggestion = "The moisture level is high. Ensure proper drainage to avoid waterlogging.";
   }
 
-  const recommendationItems = [
-    { label: "Watering Suggestion:", value: wateringSuggestion },
-    { label: "Optimal Planting Time:", value: plantingTime },
-    { label: "Optimal Harvest Time:", value: harvestTime },
-  ];
+ 
 
   return (
     <section className="flex flex-col items-center bg-[#242424] text-white p-5 rounded shadow-md mt-10 w-full max-w-4xl">
