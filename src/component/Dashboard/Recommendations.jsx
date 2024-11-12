@@ -4,13 +4,14 @@ function Recommendations({ currentMoisture }) {
   const plantingTime = "April to June";
   const harvestTime = "September to November";
 
+  var wateringSuggestion = "";
   const recommendationItems = [
     { label: "Watering Suggestion:", value: wateringSuggestion },
     { label: "Optimal Planting Time:", value: plantingTime },
     { label: "Optimal Harvest Time:", value: harvestTime },
   ];
    
-  let wateringSuggestion = "";
+  
   if (currentMoisture < 35) {
     wateringSuggestion = "The moisture level is low. It is recommended to increase watering to ensure optimal growth.";
   } else if (currentMoisture >= 35 && currentMoisture <= 70) {

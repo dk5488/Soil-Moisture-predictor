@@ -11,8 +11,8 @@ CORS(app)
 # Load the dataset
 df = pd.read_csv('./data/rice.csv')
 df.columns = df.columns.str.strip().str.replace(' ', '_').str.lower()
-
-'''client = MongoClient('mongodb+srv://divypandey110044:@cluster0.x0qe7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+#Mongopw-SNjT4kQuWF6iSvFx
+'''client = MongoClient('mongodb+srv://divypandey104:SNjT4kQuWF6iSvFx@cluster0.sutzu.mongodb.net/')
 db = client.moistureRecord
 collection = db.readings
 
@@ -88,7 +88,7 @@ def get_latest_moisture():
     # Convert the cursor to a list of moisture values
     moisture_values = [doc['soil_moisture'] for doc in latest_moisture_readings]
 
-    return jsonify({'moisture': moisture_values}), 200'''
+    return jsonify({'moisture': moisture_values}), 200
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True)'''
